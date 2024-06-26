@@ -1,0 +1,20 @@
+#clone the github repo
+git clone yolov5_link
+git clone deep_sort_pytorch_link 
+
+
+# first create env 
+conda create -n name python=3.7
+
+#activate env 
+conda activate name 
+
+
+pip install -r yolov5/requirements.txt
+
+# CPU Only
+conda install pytorch==1.7.0 torchvision==0.8.0 torchaudio==0.7.0 cpuonly -c pytorch
+
+pip install easydict
+
+python detect_sort.py --weights yolov5s.pt  --img 640  --source pedestrian.mp4
